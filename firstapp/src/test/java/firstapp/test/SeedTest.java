@@ -27,7 +27,7 @@ public class SeedTest {
 		 * me.gacl.mapping.userMapper是userMapper.xml文件中mapper标签的namespace属性的值，
 		 * getUser是select标签的id属性值，通过select标签的id属性值就可以找到要执行的SQL
 		 */
-		String statement = "firstapp.mapping.seedMapper.getSeed";// 映射sql的标识字符串
+		String statement = "firstapp.mapping.SeedMapper.selectByPrimaryKey";// 映射sql的标识字符串
 		// 执行查询返回一个唯一user对象的sql
 		Seed seed = session.selectOne(statement, 1);
 		System.out.println(seed);

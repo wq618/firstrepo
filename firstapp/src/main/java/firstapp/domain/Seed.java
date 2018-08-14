@@ -4,7 +4,6 @@ package firstapp.domain;
  * resource_seeds_info表所对应的实体类
  */
 public class Seed {
-	// 实体类的属性和表的字段名称一一对应
 	private int id;
 	private String word;
 	private String alias;
