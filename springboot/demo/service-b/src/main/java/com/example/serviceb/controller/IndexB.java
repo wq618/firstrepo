@@ -43,4 +43,10 @@ public class IndexB {
         String result = serviceAFeignClient.IndexA3(title, id);
         return "b to a 访问结果 ---" + result;
     }
+
+    @PostMapping(value = "call4")
+    public String call4(@RequestBody String body) {
+        String result = serviceAFeignClient.IndexA4(body);
+        return "b to a 访问结果 ---" + result;
+    }
 }

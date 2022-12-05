@@ -13,4 +13,7 @@ public interface ServiceAFeignClient {
 
     @PostMapping("testA3")
     String IndexA3(@RequestParam("title") String title, @RequestParam("id") Integer id);
+
+    @RequestMapping("testA4")
+    String IndexA4(@RequestBody() String body);
 }

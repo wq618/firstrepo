@@ -2,10 +2,7 @@ package com.example.servicea.controller;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 // 添加注解声明是注册中心客户端
@@ -27,6 +24,7 @@ public class IndexA {
     public String test2(@RequestParam("id") String id){
         return "Hello A2 "+ id;
     }
+
     /**
      * 微服务POST接收传参实例
      * @param title ""
@@ -36,5 +34,10 @@ public class IndexA {
     @PostMapping(value = "testA3")
     public String test3(@RequestParam("title") String title, @RequestParam("id") Integer id) {
         return "Hello A3 "+ title + " " + id;
+    }
+
+    @PostMapping(value = "testA4")
+    public String test4(@RequestBody String body) {
+        return "Hello A4 " + body;
     }
 }
